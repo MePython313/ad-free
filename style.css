@@ -26,6 +26,9 @@ header p {
   margin-bottom: 14px;
   flex-wrap: wrap;
 }
+.credits {
+  font-size: 1.25rem;
+}
 
 input {
   flex: 1;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniTube XP Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📺 MiniTube XP Edition</h1>
+      <p>Your own mini YouTube player.</p>
+    </header>
+
+    <div class="toolbar">
+      <input id="searchInput" type="text" placeholder="Search YouTube..." />
+      <button id="searchBtn">🔍 Search</button>
+    </div>
+
+    <div class="toolbar">
+      <input id="urlInput" type="text" placeholder="Paste a YouTube link..." />
+      <button id="playBtn">▶ Play</button>
+    </div>
+
+    <div id="playerContainer">
+      <div class="placeholder">Paste a YouTube URL and hit Play 🎬</div>
+    </div>
+
+    <section class="history-section">
+      <h2>🕘 Watch History</h2>
+      <div id="history"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

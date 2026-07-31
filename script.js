@@ -141,10 +141,20 @@ playBtn.addEventListener('click', () => {
   if (url) loadVideo(url);
 });
 
+/* ============ Search ============ */
+
+/* Mobile (Android/iOS) gets m.youtube.com — it doesn't force-open the app.
+   Desktop gets the normal www.youtube.com. */
+function searchBaseUrl() {
+  const ua = navigator.userAgent;
+  const isMobile = /Android/i.test(ua) || /iPhone|iPad|iPod/i.test(ua);
+  return isMobile ? 'https://m.youtube.com/' : 'https://www.youtube.com/';
+}
+
 searchBtn.addEventListener('click', () => {
   const query = searchInput.value.trim();
   if (!query) return;
-  window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
+  window.open(`${searchBaseUrl()}results?search_query=${encodeURIComponent(query)}`, '_blank');
 });
 
 urlInput.addEventListener('keydown', (e) => {

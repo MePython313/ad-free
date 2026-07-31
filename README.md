@@ -1,4 +1,4 @@
-# ad-free — MiniTube XP Edition
+# ad-free — TubeXP
 
 Watch YouTube **ad-free** with a built-in AdBlocker. Paste a link in the box and hit Play — no ads, no tracking (uses `youtube-nocookie.com` embeds).
 
@@ -16,7 +16,7 @@ Watch YouTube **ad-free** with a built-in AdBlocker. Paste a link in the box and
 
 ## How to use
 
-1. Open `ad-free.html` (or host it anywhere — it's 100% client-side).
+1. Open `index.html` (or host it anywhere — it's 100% client-side).
 2. Paste a YouTube link → hit **▶ Play**.
 3. Watch ad-free. The shield badge counts what the AdBlocker removed.
 

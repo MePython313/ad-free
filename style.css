@@ -1,16 +1,19 @@
 /* TubeXP — themed to match mepython313.github.io homepage */
 :root {
-  --bg: #0e0e10;
-  --bg2: #18181b;
-  --bg3: #1f1f23;
-  --border: rgba(255,255,255,0.08);
-  --border2: rgba(255,255,255,0.14);
-  --text: #f1f1f1;
-  --muted: #a1a1aa;
-  --faint: #52525b;
-  --green: #3ecf6a;
-  --green-hover: #34b85c;
+  --bg: #0a0a10;
+  --bg2: #141422;
+  --bg3: #1a1a2a;
+  --border: #23233a;
+  --border2: #34344f;
+  --text: #e6e6f0;
+  --muted: #8b8ba3;
+  --faint: #5a5a72;
+  --green: #3dff8b;
   --red: #ff4444;
+  --cyan: #00f0ff;
+  --purple: #a855f7;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Code", "JetBrains Mono", Consolas, "Courier New", monospace;
   --radius: 12px;
   --radius-sm: 8px;
 }
@@ -22,7 +25,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -52,7 +55,7 @@ header p {
 }
 
 .xp {
-  background: linear-gradient(180deg, #6ee7a0, #3ecf6a);
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -72,11 +75,12 @@ header p {
   margin-top: 12px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(62, 207, 106, 0.1);
-  border: 0.5px solid rgba(62, 207, 106, 0.4);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: rgba(61, 255, 139, 0.08);
+  border: 0.5px solid rgba(61, 255, 139, 0.35);
   color: var(--green);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: default;
   user-select: none;
 }
@@ -103,7 +107,7 @@ input {
   flex: 1;
   min-width: 250px;
   padding: 12px 14px;
-  border: 0.5px solid var(--border2);
+  border: 1px solid var(--border);
   border-radius: 10px;
   font-size: 16px;
   font-family: inherit;
@@ -114,40 +118,41 @@ input {
 }
 
 input::placeholder { color: var(--faint); }
-input:focus { border-color: var(--green); }
+input:focus { border-color: var(--cyan); }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-mono);
   padding: 12px 18px;
   border: none;
   border-radius: 10px;
-  background: var(--green);
-  color: #0e0e10;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  color: #05050a;
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
+  transition: filter 0.15s, transform 0.1s;
 }
 
-button:hover { background: var(--green-hover); }
+button:hover { filter: brightness(1.1); }
 button:active { transform: scale(0.97); }
 
 .btn-small {
   padding: 8px 14px;
   font-size: 0.85rem;
   font-weight: 500;
-  background: var(--bg3);
+  background: transparent;
   color: var(--muted);
+  border: 1px solid var(--border);
 }
 
-.btn-small:hover { background: #3a1a1a; color: var(--red); }
+.btn-small:hover { background: rgba(255, 68, 68, 0.1); color: var(--red); filter: none; }
 
 /* ---------- player ---------- */
 #playerContainer {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #0a0a0c;
-  border: 0.5px solid var(--border);
+  background: #08080d;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
